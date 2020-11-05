@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ja-Ja Fun</title>
+    <meta charset="utf-8">
+    <script type="module" src="./soso.js"></script>
+    <link rel="icon" type="image/x-icon" href="./extralibs/icon_circle.png">
+    <link rel="stylesheet" href="./extralibs/bootstrap.min.css">
+    <script type="text/javascript" src="./extralibs/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="./extralibs/bootstrap.min.js"></script>
+    <style>
+        body {
+            color: #fff;
+            background-color: #2c2c2c;
+        }
+
+        .card {
+            color: #fff;
+            background-color: #2c2c2c00;
+        }
+
+        #logId {
+            font-family: monospace;
+            font-style: oblique;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-lg container-fluid mt-4">
+        <div class="card center">
+            <div class="card-header">
+                <div class="card-title text-center">Browser <em style="color: chocolate;">console.log</em>
+                </div>
+            </div>
+            <div class="card-body">
+                <div id="logId"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--IMPORTANT DONT MOVE/REMOVE THIS, USED FOR REPLICATING CONSOLE LOG TO HTML-->
+    <script type="text/javascript" src="./bowserconsolelog.js"></script>
+</body>
+
+</html>
