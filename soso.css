@@ -1,0 +1,17 @@
+body {
+    color: #fff;
+    background-color: #1d2124;
+}
+
+.card {
+    color: #fff;
+    background-color: #15191c9e;
+}
+
+#logId {
+    font-family: monospace;
+}
+
+hr {
+    border-top: 0px;
+}

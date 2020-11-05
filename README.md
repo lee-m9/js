@@ -1,5 +1,5 @@
-# Ja-Ja-Script
-(JaJa Ding Ding - by fire saga)
+# Jaja-JavaScript
+(JaJa Ding Dong - by fire saga)
 
-Some topics here & some ALGOS there should most probably make ur day
+Some topics here & some ALGOS there should most probably make ur javascript happy
 
