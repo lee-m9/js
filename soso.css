@@ -8,10 +8,11 @@ body {
     background-color: #15191c9e;
 }
 
-#logId {
-    font-family: monospace;
-}
-
 hr {
     border-top: 0px;
+}
+
+pre {
+    color: #fff;
+    background-color: #00000046;
 }
