@@ -3,6 +3,7 @@ import { deepcopyDataX, shallowcopyDataX } from "./dataobjects.js";
 import { Deepcopy } from "./toxics/deep-copy.js";
 import { Calc } from "./toxics/closure.js";
 import { ArrayProtoSquare } from "./toxics/prototypes.js";
+import { chessCanvas } from "./toxics/canvas.js";
 
 console.log(' ---shallow-copy---');
 let shcopy = new Shallowcopy().shallowCopyFn(shallowcopyDataX);
@@ -22,4 +23,9 @@ console.log(" Calc().add(5).sub(2).mul(2).val() = " + Calc().add(5).sub(2).mul(2
 console.log(' ---Adding custom function to Array to return sqaured values using Prototype---');
 ArrayProtoSquare(); //Execution of this is required for below line to work as I am loading only on demand
 console.log(" [2, 4, 6, 9].Square() = ", [2, 4, 6, 9].Square());
+
+console.log(' --- Chess Canvas added to body --');
+chessCanvas(4, 3);
+console.log(' --- Chess drawn using Canvas: chessCanvas(4, 3) --');
+
 
