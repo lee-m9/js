@@ -1,4 +1,4 @@
-# Jaja-JavaScript
+# jaja-JavaScript
 A side character who only want to hear only song on repeat from  "Eurovision Song Contest: The Story of Fire Saga"
 
 Some topics here & some ALGOS there should most probably make ur javascript happy
