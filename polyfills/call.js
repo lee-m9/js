@@ -1,22 +1,30 @@
-function CallFn(thisObject, ...args) {
-    thisObject.functionName = this;
-    thisObject.functionName(...args);
+function CallFn(thisArg, ...args) {
+    if (thisArg == null || thisArg == undefined) {
+        throw new TypeError("this argument is null or undefined");
+    }
+
+    if (typeof this != "function") {
+        throw new TypeError(this + " is not a function");
+    }
+
+    thisArg.functionName = Object(this);
+    thisArg.functionName(...args);
 }
 
 //As Call() method is prototype method of Function, adding CallFn to Function prototype
 Function.prototype.callFn = CallFn;
 
-var sachin = {
+let sachin = {
     firstName: "Sachin",
     lastName: "Tendulkar",
 };
 
-var rahul = {
+let rahul = {
     firstName: "Rahul",
     lastName: "Dravid",
 };
 
-var printMessage = function (message) {
+let printMessage = function (message) {
     console.log(`Welcome ${message} ${this.lastName}, ${this.firstName}`);
 };
 
