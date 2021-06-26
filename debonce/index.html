@@ -27,6 +27,16 @@
                 outline-color: #f5be48;
             }
 
+            button {
+                padding: 0.25rem;
+                background: #8b483c;
+                border: 1px solid #8b483c;
+                border-radius: 0.1rem;
+                line-height: 1.5;
+                color: #fff;
+                outline-color: #f5be48;
+            }
+
             hr {
                 border-color: #80e0d8;
                 border-bottom: 0px;
@@ -72,6 +82,12 @@
             <input type="search" id="search" onkeyup="querySearch(event)" />
         </div>
         <br />
+
+        <div>
+            <label for"buttonclick">Register only 1st click-> </label>
+            <button id="buttonclick" onclick="onBtnClick()">Click here</button>
+        </div>
+
         <div class="terminal">
             <pre id="consolelog"></pre>
         </div>

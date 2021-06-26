@@ -21,3 +21,24 @@ const debounce = (debonceFn, delay = 300) => {
 };
 
 const querySearch = debounce(getSearchDataFromApi);
+
+//Button click debounce
+
+const onRegisterBtnClick = () => {
+    console.log("Button click registered");
+};
+
+const debounceBtn = (debounceFn, delay = 300) => {
+    let timeoutId;
+    return () => {
+        if (!timeoutId) {
+            debounceFn.call(this);
+        }
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+            timeoutId = null;
+        }, delay);
+    };
+};
+
+const onBtnClick = debounceBtn(onRegisterBtnClick);
