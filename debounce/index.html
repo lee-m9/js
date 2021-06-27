@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>debonce</title>
+        <script src="./debounce.js"></script>
+        <link href="../shared/styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <main>
+            <div class="column-left">
+                <div>
+                    <label for="search">Search</label>
+                    <input
+                        type="search"
+                        id="search"
+                        onkeyup="querySearch(event)"
+                    />
+                </div>
+                <br />
+
+                <div>
+                    <label for="buttonclick">Register only 1st click</label>
+                    <button id="buttonclick" onclick="onBtnClick()">
+                        Click here
+                    </button>
+                </div>
+            </div>
+            <div class="column-right">
+                <div class="terminal">
+                    <pre id="consolelog"></pre>
+                </div>
+            </div>
+        </main>
+        <!-- script to show console.log statements in UI -->
+        <script src="../shared/ui-console-log.js"></script>
+    </body>
+</html>

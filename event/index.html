@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events</title>
+        <link href="../shared/styles.css" rel="stylesheet" />
+        <script src="./bubble-capture.js" defer></script>
+        <script src="../shared/ui-console-log.js" defer></script>
+        <script src="event-delegation.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div class="column-left">
+                <h3>Event Bubbling & Capturing</h3>
+                <div id="bubbling">
+                    <div id="parent">
+                        parent
+                        <div id="child">
+                            child
+                            <div id="grandchild">grandchild</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="delegation">
+                    <h3>Event Delegation</h3>
+                    <ol>
+                        <li>Put a single handler on the container.</li>
+                        <li>
+                            In the handler – check the source element
+                            <code>event.target</code>.
+                        </li>
+                        <li>
+                            If the event happened inside an element that
+                            interests us, then handle the event.
+                        </li>
+                    </ol>
+                    <h4>Tree</h4>
+                    <span id="treeh"></span>
+                    <ul class="tree" id="tree">
+                        <li>
+                            <span>Animals</span>
+                            <ul>
+                                <li>
+                                    <span>Mammals</span>
+                                    <ul>
+                                        <li><span>Cows</span></li>
+                                        <li><span>Donkeys</span></li>
+                                        <li><span>Dogs</span></li>
+                                        <li><span>Tigers</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Other</span>
+                                    <ul>
+                                        <li><span>Snakes</span></li>
+                                        <li><span>Birds</span></li>
+                                        <li><span>Lizards</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Fishes</span>
+                            <ul>
+                                <li>
+                                    <span>Aquarium</span>
+                                    <ul>
+                                        <li><span>Guppy</span></li>
+                                        <li><span>Angelfish</span></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span>Sea</span>
+                                    <ul>
+                                        <li><span>Sea trout</span></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <br />
+            </div>
+            <div class="column-right">
+                <div class="terminal">
+                    <pre id="consolelog"></pre>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
